@@ -15,7 +15,7 @@ fn test_validator_transaction() {
     let program_id = Pubkey::new_unique();
 
     let (test_validator, payer) = TestValidatorGenesis::default()
-        .add_program("bpf_program_template", program_id)
+        .add_program("check", program_id)
         .start();
     let (rpc_client, recent_blockhash, _fee_calculator) = test_validator.rpc_client();
 
